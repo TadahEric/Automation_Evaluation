@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+
+		<!--<IsPackable>false</IsPackable>-->
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>_PUBLISH_CHROMEDRIVER</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DefineConstants>_PUBLISH_CHROMEDRIVER</DefineConstants>
+	</PropertyGroup>
+
+
+	<PropertyGroup>
+		<PublishChromeDriver>true</PublishChromeDriver>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Update="chromedriver.exe">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<OutputPath>app</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+		<PackageReference Include="FluentAssertions" Version="5.10.3" />
+		<PackageReference Include="Gherkin" Version="6.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+		<PackageReference Include="Selenium.Support" Version="3.141.0" />
+		<PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
+		<PackageReference Include="SpecFlow" Version="3.7.38" />
+		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.7.38" />
+		<PackageReference Include="SpecRun.Runner" Version="3.7.3" />
+		<PackageReference Include="SpecRun.SpecFlow" Version="3.7.3" />
+		<PackageReference Include="System.Data.Common" Version="4.3.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+		<PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+		<PackageReference Include="System.Security.Principal.Windows" Version="5.0.0" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+    <None Update="Features\*.feature">
+      <Generator>SpecflowSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>-->
+
+	<!--<Target Name="AfterUpdateFeatureFilesInProject">
+     include any generated SpecFlow files in the compilation of the project if not included yet 
+    <ItemGroup>
+      <Compile Include="**\*.feature.cs" Exclude="@(Compile)" />
+    </ItemGroup>
+  </Target>-->
+
+	<!--	<ItemGroup>-->
+	<!--		<None Update="xunit.runner.json">-->
+	<!--			<CopyToOutputDirectory>Always</CopyToOutputDirectory>-->
+	<!--		</None>-->
+	<!--	</ItemGroup>-->
+	<!--	-->
+</Project>
