@@ -53,12 +53,15 @@ namespace PublicAutomation.Steps
                 default:
                     searchFormResult.Should().Contain("Add postcode");
                     searchFormResult.Should().Contain("Please enter a valid category name");
+                    break;
 
                 case "postcode":
                     searchFormResult.Should().Contain("Add postcode");
+                    break;
 
                 case "category":
                     searchFormResult.Should().Contain("Please enter a valid category name");
+                    break;
 
             }
 
