@@ -17,6 +17,9 @@
 
 	<PropertyGroup>
 		<PublishChromeDriver>true</PublishChromeDriver>
+		<ApplicationIcon />
+		<OutputType>WinExe</OutputType>
+		<StartupObject />
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -34,22 +37,26 @@
 
 	<ItemGroup>
 		<PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
-		<PackageReference Include="FluentAssertions" Version="5.10.3" />
-		<PackageReference Include="Gherkin" Version="6.0.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+		<PackageReference Include="FluentAssertions" Version="6.2.0" />
+		<PackageReference Include="Gherkin" Version="22.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
 		<PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
-		<PackageReference Include="Selenium.Support" Version="3.141.0" />
-		<PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
-		<PackageReference Include="SpecFlow" Version="3.7.38" />
-		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.7.38" />
-		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.13" />
-		<PackageReference Include="SpecRun.Runner" Version="3.7.3" />
-		<PackageReference Include="SpecRun.SpecFlow" Version="3.7.3" />
+		<PackageReference Include="Selenium.Support" Version="4.0.1" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.0.1" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="96.0.4664.4500" />
+		<PackageReference Include="SpecFlow" Version="3.9.40" />
+		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.40" />
+		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.40" />
+		<PackageReference Include="SpecRun.Runner" Version="3.9.7" />
+		<PackageReference Include="SpecRun.SpecFlow" Version="3.9.7" />
 		<PackageReference Include="System.Data.Common" Version="4.3.0" />
-		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
-		<PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
 		<PackageReference Include="System.Security.Principal.Windows" Version="5.0.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<!--<ItemGroup>
